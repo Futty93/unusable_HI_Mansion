@@ -12,12 +12,53 @@
 
 <body>
     <div class="slide-content">
-        <div class="textArea" style="transform: translate(15%, 0%); width: 800px; margin-top: 150px;">
-            <div class="text">
-                this is 14!!
-            </div>
+        <div class="textArea" style="position: relative; top: 10px; left: 20px; transform: translate(0%, 0%);">
+            <div class="text first" style="position: absolute; top: 70px; left: 300px; font-size: 60px; opacity: 1;">
+                <span class="white">「上っ！！」</span>
+        </div>
+        <img id="ghost" src="./Images/ghost.png"
+            style="width: 200px; opacity: 1; position: absolute; top: 50px; left: 40px;">
+        <div class="correct" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 560px;">
+            <img id="arrowUp" src="./Images/arrowButton.png"
+                style="width: 100px; z-index: 1;">
+            <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">上</span>
+        </div>
+        <div class="wrong" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 360px;">
+            <img id="arrowRight" src="./Images/arrowButton.png"
+            style="width: 100px; z-index: 1; transform: rotate(90deg);">
+            <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">右</span>
+        </div>
+        <div class="wrong" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 160px;">
+            <img id="arrowUp" src="./Images/arrowButton.png"
+                style="width: 100px; z-index: 1; transform: rotate(180deg);">
+            <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">下</span>
+        </div>
+        <div class="wrong" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 760px;">
+            <img id="arrowUp" src="./Images/arrowButton.png"
+                style="width: 100px; z-index: 1; transform: rotate(270deg);">
+            <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">左</span>
         </div>
     </div>
-</body>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const correct = document.getElementsByClassName('correct')[0];
+            const wrong = document.getElementsByClassName('wrong');
 
+            // ボタンが押されたら画面遷移
+            correct.addEventListener('click', () => {
+                window.location.href = './slide15.html';
+            });
+
+            for (let i = 0; i < wrong.length; i++) {
+                wrong[i].addEventListener('click', () => {
+                    window.location.href = './slide17.html';
+                });
+            }
+
+            setTimeout(() => {
+                window.location.href = './slide17.html';
+            }, 3000);
+        });
+    </script>
+</body>
 </html>
