@@ -1,3 +1,4 @@
+</html>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -12,12 +13,37 @@
 
 <body>
     <div class="slide-content">
-        <div class="textArea" style="transform: translate(15%, 0%); width: 800px; margin-top: 150px;">
-            <div class="text">
-                this is 12!!
+        <div class="textArea" style="position: relative; top: 10px; left: 20px; transform: translate(0%, 0%);">
+            <div class="text first" style="position: absolute; display: inline-block; font-size: 40px; opacity: 1;">
+                さぁ、問題です！
+            </div>
+            <div class="text second" style="position: absolute; top: 80px; display: inline-block; font-size: 40px; opacity: 1;">
+                今から示す漢字と同じ向きの<br>
+                矢印画像を<span class="white" style="text-decoration: underline;">3秒以内</span>にクリックしてください
+            </div>
+            <div class="text third" style="position: absolute; top: 200px; display: inline-block; font-size: 40px; opacity: 1;">
+                例えば、
+            </div>
+            <div class="text third" style="position: absolute; top: 280px; display: inline-block; font-size: 40px; opacity: 1;">
+                <span class="white">「上」</span>と表示されたら・・・
+            </div>
+            <div class="text fourth" style="position: absolute; top: 360px; display: inline-block; font-size: 40px; opacity: 1;">
+                <span class="white">「下」</span>と表示されたら・・・
+            </div>
+            <div class="text fifth" style="position: absolute; top: 440px; display: inline-block; font-size: 40px; opacity: 1;">
+                をクリックしてください
             </div>
         </div>
+        <img id="ghost" src="./Images/ghost.png"
+            style="width: 200px; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 15%; left: 85%; transition: opacity 1s, width 1s, transform 1s;">
+        <img id="arrowUp" src="./Images/arrowButton.png"
+            style="width: 200px; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 15%; left: 85%; transition: opacity 1s, width 1s, transform 1s;">
+        <img id="arrowRight" src="./Images/arrowButton.png"
+            style="width: 200px; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 15%; left: 85%; transition: opacity 1s, width 1s, transform 1s;">
     </div>
+    <script>
+        
+    </script>
 </body>
 
 </html>
