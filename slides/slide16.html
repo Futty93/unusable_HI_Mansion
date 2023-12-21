@@ -23,7 +23,7 @@
                 style="width: 100px; z-index: 1;">
             <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">右</span>
         </div>
-        <div class="wrong" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 360px;">
+        <div class="incorrect" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 360px;">
             <img id="arrowRight" src="./Images/arrowButton.png"
             style="width: 100px; z-index: 1; transform: rotate(90deg);">
             <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">左</span>
@@ -43,21 +43,27 @@
         window.addEventListener('DOMContentLoaded', () => {
             const correct = document.getElementsByClassName('correct')[0];
             const wrong = document.getElementsByClassName('wrong');
+            const incorrect = document.getElementsByClassName('incorrect')[0];
 
             // ボタンが押されたら画面遷移
             correct.addEventListener('click', () => {
-                window.location.href = './slide18.html';
+                window.location.href = './slide19.html'; // -> ぐっ、やられた…
             });
 
             for (let i = 0; i < wrong.length; i++) {
                 wrong[i].addEventListener('click', () => {
-                    window.location.href = './slide17.html';
+                    window.location.href = './slide17.html'; // -> やり直しっ！
                 });
             }
 
-            setTimeout(() => {
-                window.location.href = './slide17.html';
-            }, 3000);
+            // ボタンが押されたら画面遷移
+            correct.addEventListener('click', () => {
+                window.location.href = './slide18.html'; // -> よくぞ引っかかってくれました
+            });
+
+            // setTimeout(() => {
+            //     window.location.href = './slide17.html';
+            // }, 3000);
         });
     </script>
 </body>
