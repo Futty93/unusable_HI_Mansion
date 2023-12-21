@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+</html><!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -11,13 +11,39 @@
 </head>
 
 <body>
-    <div class="slide-content">
-        <div class="textArea" style="transform: translate(15%, 0%); width: 800px; margin-top: 150px;">
-            <div class="text">
-                this is 18!!
+    <div class="slide-content" style="position: relative;">
+        <div class="textArea">
+            <div class="text first" style="z-index: 2; display: inline-block; font-size: 40px; opacity: 0; position: absolute; background-color: rgba(0, 0, 0, 0.6); top: 360px; left: 80px;">
+                そうそう、よくぞひっかかってくれました！
             </div>
         </div>
+        <img id="ghost" src="./Images/ghost.png" style="width: 800px; transform: translate(-50%, -40%); opacity: 0; position: absolute; top: 50%; left: 50%;">
     </div>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const textFirst = document.querySelector('.first');
+            const ghost = document.querySelector('#ghost');
+
+            // 画面の要素を時間差で登場させる
+            setTimeout(() => {
+                textFirst.style.transition = "opacity 2s ease-in-out"
+                ghost.style.transition = "opacity 2s ease-in-out"
+                textFirst.style.opacity = 1;
+                ghost.style.opacity = 1;
+            }, 1000);
+
+            setTimeout(() => {
+                textFirst.style.opacity = 0;
+                ghost.style.opacity = 0;
+            }, 4000);
+
+            自動で画面遷移
+            setTimeout(() => {
+                window.location.href = './slide20.html';
+            }, 6000);
+        });
+    </script>
 </body>
 
 </html>
