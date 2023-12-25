@@ -94,8 +94,8 @@
             // ボタンが押されたら画面遷移
             const escapeButton = document.getElementById('escape');
             escapeButton.addEventListener('click', () => {
-                const randomTop = Math.random() * 90;
-                const randomLeft = Math.random() * 90;
+                const randomTop = Math.random() * 85 + 5;
+                const randomLeft = Math.random() * 85 + 5;
                 escapeButton.style.top = `${randomTop}%`;
                 escapeButton.style.left = `${randomLeft}%`;
             });

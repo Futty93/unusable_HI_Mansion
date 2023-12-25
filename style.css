@@ -105,4 +105,15 @@ button {
     /* background: red; */
 }
 
-
+.textButton {
+    width: 80px; /* ボタンの幅 */
+    height: 80px; /* ボタンの高さ */
+    border: 1px solid white; /* 白い枠 */
+    background-color: black; /* 黒い背景 */
+    color: white; /* 文字色 */
+    font-size: 40px; /* フォントサイズ */
+    font-weight: bold;
+    text-align: center; /* テキストを中央揃え */
+    line-height: 80px; /* テキストを垂直方向に中央揃え */
+    outline: none; /* ボタンにフォーカス時の枠を消す */
+}
