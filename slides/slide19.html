@@ -22,8 +22,12 @@
     
     <script>
         window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const fromPage = params.get('from');
             const textFirst = document.querySelector('.first');
             const ghost = document.querySelector('#ghost');
+
+            console.log(fromPage);
 
             // 画面の要素を時間差で登場させる
             setTimeout(() => {
@@ -35,7 +39,13 @@
 
             // 自動で画面遷移
             setTimeout(() => {
-                window.location.href = './slide20.html';
+                if (fromPage === 'slide16') {
+                    window.location.href = './slide20.html';
+                } else if (fromPage === 'slide27') {
+                    window.location.href = './slide28.html';
+                } else {
+                    window.location.href = './slide20.html';
+                }
             }, 4000);
         });
     </script>

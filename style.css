@@ -81,9 +81,6 @@ button {
 
 .disable {
     opacity: 1;
-    /* cursor: not-allowed; */
-    /* pointer-events: none;
-    box-shadow: none; */
     background: linear-gradient(to bottom, #330000, #220000); /* 背景色を変更 */
     color: #700;
     transform: rotate(3deg);
@@ -102,7 +99,6 @@ button {
 .white::selection {
     color: white;
     text-shadow: 0 0 5px black;
-    /* background: red; */
 }
 
 .textButton {
@@ -114,6 +110,7 @@ button {
     font-size: 40px; /* フォントサイズ */
     font-weight: bold;
     text-align: center; /* テキストを中央揃え */
+    cursor: pointer;
     line-height: 80px; /* テキストを垂直方向に中央揃え */
     outline: none; /* ボタンにフォーカス時の枠を消す */
 }

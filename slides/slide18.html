@@ -22,6 +22,8 @@
     
     <script>
         window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const fromPage = params.get('from');
             const textFirst = document.querySelector('.first');
             const ghost = document.querySelector('#ghost');
 
@@ -40,7 +42,13 @@
 
             自動で画面遷移
             setTimeout(() => {
-                window.location.href = './slide20.html';
+                if (fromPage === 'slide16') {
+                    window.location.href = './slide20.html';
+                } else if (fromPage === 'slide27') {
+                    window.location.href = './slide28.html';
+                } else {
+                    window.location.href = './slide20.html';
+                }
             }, 6000);
         });
     </script>

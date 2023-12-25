@@ -1,3 +1,4 @@
+</html>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -12,12 +13,100 @@
 
 <body>
     <div class="slide-content">
-        <div class="textArea" style="transform: translate(15%, 0%); width: 800px; margin-top: 150px;">
-            <div class="text">
-                this is 27!!
+        <div class="textArea" style="position: relative; top: 50px; left: 200px; transform: translate(0%, 0%);">
+            <div class="text white" style="position: absolute; display: inline-block; font-size: 60px; opacity: 1;">
+                「大」！！
             </div>
         </div>
+        <img class="ghost" src="./Images/ghost.png"
+            style="width: 180px; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 20%; left: 10%; transition: opacity 1s, width 1s, transform 1s;">
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 40%; left: 10%;
+            ">太</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 40%; left: 22%;
+            ">太</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 40%; left: 34%;
+            ">犬</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 40%; left: 46%;
+            ">人</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 40%; left: 58%;
+            ">木</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 40%; left: 70%;
+            ">太</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 40%; left: 82%;
+            ">犬</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 60%; left: 10%;
+            ">木</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 60%; left: 22%;
+            ">太</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 60%; left: 34%;
+            ">犬</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 60%; left: 46%;
+            ">木</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 60%; left: 58%;
+            ">犬</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 60%; left: 70%;
+            ">太</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 60%; left: 82%;
+            ">人</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 80%; left: 10%;
+            ">犬</div>
+        <div class="textButton correct" style="
+            opacity: 1; position: absolute; top: 80%; left: 22%;
+            ">大</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 80%; left: 34%;
+            ">太</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 80%; left: 46%;
+            ">犬</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 80%; left: 58%;
+            ">木</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 80%; left: 70%;
+            ">人</div>
+        <div class="textButton wrong" style="
+            opacity: 1; position: absolute; top: 80%; left: 82%;
+            ">犬</div>
     </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const wrong = document.getElementsByClassName('wrong');
+            const correct = document.getElementsByClassName('correct')[0];
+
+            // ボタンが押されたら画面遷移
+            for (let i = 0; i < wrong.length; i++) {
+                wrong[i].addEventListener('click', () => {
+                    window.location.href = './slide18.html?from=slide27';
+                });
+            }
+
+            // ボタンが押されたら画面遷移
+            correct.addEventListener('click', () => {
+                window.location.href = './slide19.html?from=slide27';
+            });
+
+            setTimeout(() => {
+                window.location.href = './slide18.html?from=slide27';
+            }, 5000);
+
+        });
+    </script>
 </body>
 
 </html>
