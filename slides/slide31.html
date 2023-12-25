@@ -12,12 +12,32 @@
 
 <body>
     <div class="slide-content">
-        <div class="textArea" style="transform: translate(15%, 0%); width: 800px; margin-top: 150px;">
-            <div class="text">
-                this is 31!!
+        <div class="textArea" style="margin-top: 220px; display: flex; justify-content: center;">
+            <div class="text first" style="display: inline-block; font-size: 40px; opacity: 0;">
+                あ、それから・・・
             </div>
         </div>
     </div>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const textFirst = document.querySelector('.first');
+
+            // 画面の要素を時間差で登場させる
+            setTimeout(() => {
+                textFirst.style.transition = "opacity 1s ease-in-out"
+                textFirst.style.opacity = 1;
+            }, 1000);
+
+            setTimeout(() => {
+                textFirst.style.opacity = 0;
+            }, 3000);
+
+            setTimeout(() => {
+                window.location.href = './slide32.html';
+            }, 4000);
+        });
+    </script>
 </body>
 
 </html>
