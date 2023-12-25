@@ -54,6 +54,12 @@ button {
     box-shadow: 0 0 10px rgba(230, 0, 0, 0.8);
 }
 
+button:hover {
+    color: #f33;
+    background: linear-gradient(to bottom, #700, #400);
+    box-shadow: 0 0 15px rgba(230, 0, 0, 0.8);
+}
+
 @keyframes blink {
     0% {
     opacity: 1;

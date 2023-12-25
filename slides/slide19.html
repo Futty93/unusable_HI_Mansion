@@ -17,7 +17,7 @@
                 <span class="white">ぐっ、やられた…</span>
             </div>
         </div>
-        <img id="ghost" src="./Images/ghost.png" style="width: 320px; transform: translate(-50%, -40%); opacity: 1; position: absolute; top: 50%; left: 30%;">
+        <img class="ghost" src="./Images/ghost.png" style="width: 320px; transform: translate(-50%, -40%); opacity: 1; position: absolute; top: 50%; left: 30%;">
     </div>
     
     <script>
@@ -25,7 +25,7 @@
             const params = new URLSearchParams(window.location.search);
             const fromPage = params.get('from');
             const textFirst = document.querySelector('.first');
-            const ghost = document.querySelector('#ghost');
+            const ghost = document.querySelector('.ghost');
 
             console.log(fromPage);
 
