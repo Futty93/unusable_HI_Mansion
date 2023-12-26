@@ -1,4 +1,5 @@
-</html><!DOCTYPE html>
+</html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -8,23 +9,25 @@
     <meta name="description"
         content="高橋狩川研究室ではヒューマンインターフェースについて研究を行っています。ここでは使いにくいインターフェースをあえて体験していただくことで、研究内容に関して少しでも興味を持っていただけたら幸いです。">
     <link rel="stylesheet" type="text/css" href="../style.css">
-<style>
-    body.loading {
-      background-color: black;
-    }
-  </style>
+    <style>
+        body.loading {
+            background-color: black;
+        }
+    </style>
 </head>
 
 <body>
     <div class="slide-content" style="position: relative;">
         <div class="textArea">
-            <div class="text first" style="z-index: 2; display: inline-block; font-size: 40px; opacity: 0; position: absolute; background-color: rgba(0, 0, 0, 0.6); top: 360px; left: 80px;">
+            <div class="text first"
+                style="z-index: 2; display: inline-block; font-size: 40px; opacity: 0; position: absolute; background-color: rgba(0, 0, 0, 0.6); top: 360px; left: 80px;">
                 そうそう、よくぞひっかかってくれました！
             </div>
         </div>
-        <img id="ghost" src="./Images/ghost.png" style="width: 800px; transform: translate(-50%, -40%); opacity: 0; position: absolute; top: 50%; left: 50%;">
+        <img id="ghost" src="./Images/ghost.png"
+            style="width: 800px; transform: translate(-50%, -40%); opacity: 0; position: absolute; top: 50%; left: 50%;">
     </div>
-    
+
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
@@ -58,5 +61,4 @@
         });
     </script>
 </body>
-
 </html>
