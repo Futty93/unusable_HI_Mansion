@@ -15,32 +15,67 @@
         <div class="textArea" style="position: relative; top: 10px; left: 20px; transform: translate(0%, 0%);">
             <div class="text first" style="position: absolute; top: 70px; left: 300px; font-size: 60px; opacity: 1;">
                 <span class="white">「上っ！！」</span>
+            </div>
         </div>
-        <img id="ghost" src="./Images/ghost.png"
-            style="width: 200px; opacity: 1; position: absolute; top: 50px; left: 40px;">
-        <div class="correct" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 560px;">
-            <img id="arrowUp" src="./Images/arrowButton.png"
-                style="width: 100px; z-index: 1;">
-            <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">上</span>
-        </div>
-        <div class="wrong" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 360px;">
-            <img id="arrowRight" src="./Images/arrowButton.png"
-            style="width: 100px; z-index: 1; transform: rotate(90deg);">
-            <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">右</span>
-        </div>
-        <div class="wrong" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 160px;">
-            <img id="arrowUp" src="./Images/arrowButton.png"
-                style="width: 100px; z-index: 1; transform: rotate(180deg);">
-            <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">下</span>
-        </div>
-        <div class="wrong" style="cursor: pointer; transform: translate(-50%, -50%); opacity: 1; position: absolute; top: 360px; left: 760px;">
-            <img id="arrowUp" src="./Images/arrowButton.png"
-                style="width: 100px; z-index: 1; transform: rotate(270deg);">
-            <span class="imageText" style="position: absolute; font-size: 40px; z-index: 2; top: 20px; left: 30px;">左</span>
-        </div>
+        <img class="ghost" src="./Images/ghost.png"
+            style="width: 200px; opacity: 1; position: absolute; top: 150px; left: 140px;">
+        <div id="buttonContainer"></div>
     </div>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
+            function addElementsToContainer() {
+                let elementsInfo = [
+                    { class: 'correct', rotation: '0', text: '上' },
+                    { class: 'wrong', rotation: '90', text: '右' },
+                    { class: 'wrong', rotation: '180', text: '下' },
+                    { class: 'wrong', rotation: '270', text: '左' }
+                ];
+
+                function shuffleArray(array) {
+                    for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                    }
+                    return array;
+                }
+
+                elementsInfo = shuffleArray(elementsInfo);
+
+                const container = document.getElementById('buttonContainer');
+
+                elementsInfo.forEach((info, index) => {
+                    const div = document.createElement('div');
+                    div.classList.add(info.class);
+                    div.style.cursor = 'pointer';
+                    div.style.transform = 'translate(-50%, -50%)';
+                    div.style.opacity = '1';
+                    div.style.position = 'absolute';
+                    div.style.top = '360px';
+                    div.style.left = `${200 * index + 150}px`;
+
+                    const img = document.createElement('img');
+                    img.src = './Images/arrowButton.png';
+                    img.style.width = '100px';
+                    img.style.zIndex = '1';
+                    img.style.transform = `rotate(${info.rotation}deg)`;
+
+                    const span = document.createElement('span');
+                    span.classList.add('imageText');
+                    span.style.position = 'absolute';
+                    span.style.fontSize = '40px';
+                    span.style.zIndex = '2';
+                    span.style.top = '20px';
+                    span.style.left = '30px';
+                    span.textContent = info.text;
+
+                    div.appendChild(img);
+                    div.appendChild(span);
+                    container.appendChild(div);
+                });
+            }
+
+            addElementsToContainer();
+
             const correct = document.getElementsByClassName('correct')[0];
             const wrong = document.getElementsByClassName('wrong');
 

@@ -20,14 +20,14 @@
                 キミはもう、この館から逃れられない!!
             </div>
         </div>
-        <img id="ghost" src="./Images/ghost.png" style="width: 800px; transform: translate(-50%, -40%); opacity: 1; position: absolute; top: 50%; left: 50%;">
+        <img class="ghost" src="./Images/ghost.png" style="width: 800px; transform: translate(-50%, -40%); opacity: 1; position: absolute; top: 65%; left: 50%;">
     </div>
     
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const textFirst = document.querySelector('.first');
             const textSecond = document.querySelector('.second');
-            const ghost = document.querySelector('#ghost');
+            const ghost = document.querySelector('.ghost');
 
             // 画面の要素を時間差で登場させる
             setTimeout(() => {
