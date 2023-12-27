@@ -51,11 +51,29 @@
             // 自動で画面遷移
             setTimeout(() => {
                 if (fromPage === 'slide16') {
-                    window.location.href = './slide20.html';
+                    const nextPageUrl = './slide20.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
                 } else if (fromPage === 'slide27') {
-                    window.location.href = './slide28.html';
+                    const nextPageUrl = './slide28.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
                 } else {
-                    window.location.href = './slide20.html';
+                    const nextPageUrl = './slide20.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
                 }
             }, 6000);
         });

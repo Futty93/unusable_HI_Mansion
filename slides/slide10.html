@@ -42,7 +42,13 @@
 
             // 自動で画面遷移
             setTimeout(() => {
-                window.location.href = './slide11.html';
+                const nextPageUrl = './slide11.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             }, 5000);
         });
     </script>

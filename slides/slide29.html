@@ -84,9 +84,16 @@
             });
 
             setTimeout(() => {
-                window.location.href = './slide30.html?from=slide27';
+                const nextPageUrl = './slide30.html?from=slide27';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             }, 8000);
         });
     </script>
 </body>
+
 </html>

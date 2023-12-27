@@ -36,8 +36,16 @@
         window.addEventListener('DOMContentLoaded', () => {
             const button = document.getElementById('start');
             button.addEventListener('click', () => {
-                window.location.href = './slides/slide1.html';
+                const nextPageUrl = './slides/slide1.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
         });
     </script>
-</body></html>
+</body>
+
+</html>

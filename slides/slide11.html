@@ -66,7 +66,13 @@
 
             // ボタンが押されたら画面遷移
             fightButton.addEventListener('click', () => {
-                window.location.href = './slide12.html';
+                const nextPageUrl = './slide12.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
 
             const escapeButton = document.querySelector('#escape');

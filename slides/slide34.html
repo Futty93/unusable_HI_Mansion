@@ -62,7 +62,13 @@
             // ボタンが押されたら画面遷移
             const backButton = document.getElementById('backToTop');
             backButton.addEventListener('click', () => {
-                window.location.href = '../index.html';
+                const nextPageUrl = '../index.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
         });
     </script>

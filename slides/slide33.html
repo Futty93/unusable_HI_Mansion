@@ -78,7 +78,13 @@
             // ボタンが押されたら画面遷移
             const nextButton = document.getElementById('next');
             nextButton.addEventListener('click', () => {
-                window.location.href = './slide34.html';
+                const nextPageUrl = './slide34.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
         });
     </script>

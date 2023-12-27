@@ -107,7 +107,13 @@
             }, 15000);
 
             setTimeout(() => {
-                window.location.href = './slide13.html';
+                const nextPageUrl = './slide13.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             }, 20000);
 
         });

@@ -48,7 +48,13 @@
                 }, 4000);
 
                 setTimeout(() => {
-                    window.location.href = './slide27.html';
+                    const nextPageUrl = './slide27.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
                 }, 7000);
             });
         </script>

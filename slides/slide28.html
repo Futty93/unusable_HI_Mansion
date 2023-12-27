@@ -56,7 +56,13 @@
             }, 12000);
 
             setTimeout(() => {
-                window.location.href = './slide29.html'; // -> さらに廊下を進んでいくと
+                const nextPageUrl = './slide29.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                }); // -> さらに廊下を進んでいくと
             }, 14000);
         });
     </script>

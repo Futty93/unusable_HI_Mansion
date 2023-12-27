@@ -94,7 +94,13 @@
             // ボタンが押されたら画面遷移
             const fightButton = document.getElementById('fight');
             fightButton.addEventListener('click', () => {
-                window.location.href = './slide25.html';
+                const nextPageUrl = './slide25.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
 
             // ボタンが押されたら画面遷移

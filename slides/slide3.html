@@ -61,13 +61,25 @@
             // ボタンが押されたら画面遷移
             const yesButton = document.getElementById('yes');
             yesButton.addEventListener('click', () => {
-                window.location.href = './slide4.html';
+                const nextPageUrl = './slide4.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
 
             // ボタンが押されたら画面遷移
             const noButton = document.getElementById('no');
             noButton.addEventListener('click', () => {
-                window.location.href = './slide7.html';
+                const nextPageUrl = './slide7.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
         });
     </script>

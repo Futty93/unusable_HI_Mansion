@@ -61,14 +61,26 @@
                 ghost.style.zIndex = 10;
                 ghost.style.transform = "translate(-50%, -50%) scale(1)";
                 setTimeout(() => {
-                    window.location.href = './slide5.html';
+                    const nextPageUrl = './slide5.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
                 }, 3000);
             });
 
             // ボタンが押されたら画面遷移
             const yesButton = document.getElementById('yes');
             yesButton.addEventListener('click', () => {
-                window.location.href = './slide6.html';
+                const nextPageUrl = './slide6.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
         });
     </script>

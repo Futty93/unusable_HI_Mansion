@@ -86,17 +86,35 @@
 
             // ボタンが押されたら画面遷移
             correct.addEventListener('click', () => {
-                window.location.href = './slide15.html';
+                const nextPageUrl = './slide15.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
 
             for (let i = 0; i < wrong.length; i++) {
                 wrong[i].addEventListener('click', () => {
-                    window.location.href = './slide17.html';
+                    const nextPageUrl = './slide17.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
                 });
             }
 
             setTimeout(() => {
-                window.location.href = './slide17.html';
+                const nextPageUrl = './slide17.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             }, 3000);
         });
     </script>

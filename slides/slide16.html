@@ -88,24 +88,49 @@
 
             // ボタンが押されたら画面遷移
             correct.addEventListener('click', () => {
-                window.location.href = './slide19.html?from=slide16'; // -> ぐっ、やられた…
+                const nextPageUrl = './slide19.html?from=slide16'; // -> ぐっ、やられた…
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             });
 
             for (let i = 0; i < wrong.length; i++) {
                 wrong[i].addEventListener('click', () => {
-                    window.location.href = './slide17.html'; // -> やり直しっ！
+                    const nextPageUrl = './slide17.html';
+
+                    // 次のページを読み込む
+                    window.fetch(nextPageUrl).then((response) => {
+                        // 読み込みが完了したら画面遷移を行う
+                        window.location.href = nextPageUrl;
+                    }); // -> やり直しっ！
                 });
             }
 
             // ボタンが押されたら画面遷移
             incorrect.addEventListener('click', () => {
-                window.location.href = './slide18.html'; // -> よくぞ引っかかってくれました
+                const nextPageUrl = './slide18.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                }); // -> よくぞ引っかかってくれました
             });
 
             setTimeout(() => {
-                window.location.href = './slide17.html';
+                const nextPageUrl = './slide17.html';
+
+                // 次のページを読み込む
+                window.fetch(nextPageUrl).then((response) => {
+                    // 読み込みが完了したら画面遷移を行う
+                    window.location.href = nextPageUrl;
+                });
             }, 3000);
         });
     </script>
 </body>
+
 </html>
