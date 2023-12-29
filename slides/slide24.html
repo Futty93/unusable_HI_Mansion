@@ -105,11 +105,23 @@
 
             // ボタンが押されたら画面遷移
             const escapeButton = document.getElementById('escape');
+            let count = 0;
             escapeButton.addEventListener('click', () => {
-                const randomTop = Math.random() * 85 + 5;
-                const randomLeft = Math.random() * 85 + 5;
-                escapeButton.style.top = `${randomTop}%`;
-                escapeButton.style.left = `${randomLeft}%`;
+                if (count === 2) {
+                    escapeButton.style.top = `85%`;
+                    escapeButton.style.left = `28%`;
+                    escapeButton.style.zIndex = '1';
+                    fightButton.style.zIndex = '2';
+                    fightButton.style.animation = '';
+                    fightButton.style.opacity = 0.6;
+                } else {
+                    escapeButton.style.transition = 'top 1s ease-in-out, left 1s ease-in-out';
+                    const randomTop = Math.random() * 85 + 5;
+                    const randomLeft = Math.random() * 85 + 5;
+                    escapeButton.style.top = `${randomTop}%`;
+                    escapeButton.style.left = `${randomLeft}%`;
+                    count++;
+                }
             });
         });        
     </script>
